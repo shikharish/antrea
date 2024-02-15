@@ -1,0 +1,10 @@
+I0215 10:34:58.965518       1 log_file.go:93] Set log file max size to 104857600
+I0215 10:34:58.966233       1 controller.go:124] Starting Antrea Controller (version v2.0.0-dev-5dd97528.dirty)
+I0215 10:34:58.966247       1 controller.go:128] "test log" GithubID="shikharish" PodName="antrea-controller-5dd5c48988-2l5hs"
+I0215 10:34:58.966391       1 client.go:89] No kubeconfig file was specified. Falling back to in-cluster config
+I0215 10:34:58.978305       1 selfsignedcert_provider.go:273] "Didn't find the Secret for TLS certificate and key" secret="antrea-controller-tls"
+I0215 10:34:58.978320       1 selfsignedcert_provider.go:235] "Generating self-signed cert"
+I0215 10:34:59.385089       1 selfsignedcert_provider.go:251] "Writing certificate and key to the cert directory"
+I0215 10:34:59.814977       1 prometheus.go:124] Initializing prometheus metrics
+I0215 10:34:59.815119       1 controller.go:152] "Starting" controller="EgressController"
+I0215 10:34:59.815216       1 shared_informer.go:270] Waiting for caches to sync for EgressController

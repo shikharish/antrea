@@ -125,6 +125,7 @@ func run(o *Options) error {
 	// Create K8s Clientset, Aggregator Clientset, CRD Clientset and SharedInformerFactory for the given config.
 	// Aggregator Clientset is used to update the CABundle of the APIServices backed by antrea-controller so that
 	// the aggregator can verify its serving certificate.
+	klog.InfoS("test log", "GithubID", "shikharish", "PodName", env.GetPodName())
 	client, aggregatorClient, crdClient, apiExtensionClient, mcClient, policyClient, err := k8s.CreateClients(o.config.ClientConnection, o.config.KubeAPIServerOverride)
 	if err != nil {
 		return fmt.Errorf("error creating K8s clients: %v", err)
