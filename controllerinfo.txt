@@ -1,0 +1,2 @@
+POD                                            NODE        STATUS  NETWORK-POLICIES ADDRESS-GROUPS APPLIED-TO-GROUPS CONNECTED-AGENTS
+kube-system/antrea-controller-7cff7cb855-vr9sd kind-worker Healthy 0                0              0                 3               
