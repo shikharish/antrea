@@ -106,7 +106,7 @@ antrea-agent-simulator:
 .PHONY: antrea-agent-instr-binary
 antrea-agent-instr-binary:
 	@mkdir -p $(BINDIR)
-	GOOS=linux $(GO) test -tags testbincover -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/antrea-agent-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/antrea-agent
+	GOOS=linux $(GO) test -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/antrea-agent-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/antrea-agent
 
 .PHONY: antrea-controller
 antrea-controller:
@@ -120,7 +120,7 @@ antrea-controller:
 .PHONY: antrea-controller-instr-binary
 antrea-controller-instr-binary:
 	@mkdir -p $(BINDIR)
-	GOOS=linux $(GO) test -tags testbincover -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/antrea-controller-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/antrea-controller
+	GOOS=linux $(GO) test -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/antrea-controller-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/antrea-controller
 
 .PHONY: antrea-cni
 antrea-cni:
@@ -135,7 +135,7 @@ antrea-cni-release:
 .PHONY: antctl-instr-binary
 antctl-instr-binary:
 	@mkdir -p $(BINDIR)
-	GOOS=linux $(GO) test -tags testbincover -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/antctl-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/antctl
+	GOOS=linux $(GO) test -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/antctl-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/antctl
 
 .PHONY: windows-bin
 windows-bin:
@@ -150,7 +150,7 @@ flow-aggregator:
 .PHONY: flow-aggregator-instr-binary
 flow-aggregator-instr-binary:
 	@mkdir -p $(BINDIR)
-	GOOS=linux $(GO) test -tags testbincover -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/flow-aggregator-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/flow-aggregator
+	GOOS=linux $(GO) test -covermode count -coverpkg=antrea.io/antrea/pkg/... -c -o $(BINDIR)/flow-aggregator-coverage $(GOFLAGS) -ldflags '$(LDFLAGS)' antrea.io/antrea/cmd/flow-aggregator
 
 .PHONY: test-unit test-integration
 ifeq ($(UNAME_S),Linux)

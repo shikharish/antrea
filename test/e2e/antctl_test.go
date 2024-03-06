@@ -123,7 +123,7 @@ func antctlCoverageArgs(antctlPath string, covDir string) []string {
 	if covDir != "" {
 		covFile = path.Join(covDir, covFile)
 	}
-	return []string{antctlPath, "-test.run=TestBincoverRunMain", fmt.Sprintf("-test.coverprofile=%s", covFile)}
+	return []string{antctlPath, fmt.Sprintf("-test.coverprofile=%s", covFile)}
 }
 
 // testAntctlAgentLocalAccess ensures antctl is accessible in an agent Pod.
